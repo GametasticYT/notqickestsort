@@ -1,3 +1,4 @@
+import sys
 def main():
     f = open("numbers.txt", "r")
     i = 0
@@ -7,9 +8,10 @@ def main():
     n = len(lines)
 
     qsort(lines, 0, n - 1)
+    print("[", end="")
     for i in range(n):
         print("%s" %lines[i], end=", ")
-    print()
+    sys.stdout.write('\b\b]\n')
     
         
 def qsort(arr, low, high):
