@@ -1,6 +1,3 @@
-import math
-
-
 def main():
     f = open("numbers.txt", "r")
     i = 0
@@ -11,7 +8,8 @@ def main():
 
     qsort(lines, 0, n - 1)
     for i in range(n):
-        print("%s" %lines[i])
+        print("%s" %lines[i], end=", ")
+    print()
     
         
 def qsort(arr, low, high):
