@@ -1,4 +1,4 @@
-import sys
+import sys, time
 def main():
     f = open("numbers.txt", "r")
     i = 0
@@ -28,7 +28,10 @@ def partition(arr, low, high):
         if arr[j] < pivot:
             i = i + 1
             arr[i],arr[j] = arr[j],arr[i]
+            print(arr, end="\r")
+            time.sleep(0.1)
         j = j + 1
+        
     arr[i+1],arr[high] = arr[high],arr[i+1]
     return (i + 1)
 
