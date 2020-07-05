@@ -10,7 +10,7 @@ def main():
         print(lines[i], end=", ")
         lines[i] = int(lines[i])
     n = len(lines)
-    print("")
+    print("\n\n")
     qsort(lines, 0, n - 1)
     print("[", end="")
     for i in range(n):
