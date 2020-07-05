@@ -15,7 +15,7 @@ def main():
     print("[", end="")
     for i in range(n):
         print("%s" % lines[i], end=", ")
-    sys.stdout.write('\b\b]\n')
+    sys.stdout.write('\b]\n')
 
 
 def qsort(arr, low, high):
