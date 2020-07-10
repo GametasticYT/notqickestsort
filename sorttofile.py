@@ -7,15 +7,13 @@ def main():
     i = 0
     lines = f.read().split(',')
     for i in range(0, len(lines)):
-        print(lines[i], end=", ")
         lines[i] = int(lines[i])
     n = len(lines)
     print("\n\n")
     qsort(lines, 0, n - 1)
-    print("[", end="")
-    for i in range(n):
-        print("%s" % lines[i], end=", ")
-    sys.stdout.write('\b]\n')
+    with open('snumbers.txt', 'w') as ff:
+        for item in lines:
+            ff.write("%s " % item)
 
 
 def qsort(arr, low, high):
@@ -33,8 +31,6 @@ def partition(arr, low, high):
         if arr[j] < pivot:
             i = i + 1
             arr[i], arr[j] = arr[j], arr[i]
-            print(arr, end="\r")
-            time.sleep(0.1)
         j = j + 1
 
     arr[i+1], arr[high] = arr[high], arr[i+1]
